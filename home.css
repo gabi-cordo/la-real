@@ -1,0 +1,40 @@
+
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+
+}
+
+body{
+    background-color:#1a1a1a;
+    background-image: url(imagenes/black_lozenge_@2X.png);
+    color:white;
+    
+}
+
+.botones{
+    
+    max-width: 1000px;
+    padding-top: 10px;
+    list-style-type: none;
+    text-align: center;
+    margin: auto;
+}
+.botones a{
+    
+    width: 200px;
+    padding: 20px;
+    display: block;
+    float: left;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid #000000;
+
+}
+.botones a:hover{
+    color:yellow;
+
+
+}

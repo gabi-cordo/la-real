@@ -8,33 +8,201 @@
 }
 
 body{
-    background-color:#1a1a1a;
-    background-image: url(imagenes/black_lozenge_@2X.png);
+    background-color:#030303;
+    background-image: url(imagenes/black_linen_v2/black_linen_v2.png);
     color:white;
-    
 }
 
-.botones{
-    
+.contenedor{
     max-width: 1000px;
-    padding-top: 10px;
+    margin: auto;
+
+}
+.inicio{
+    background-image: url("imagenes/leon-reggaehome.jpg");
+    overflow: auto;
+    height: 800px;
+    background-size: cover;
+}
+
+header{
+
     list-style-type: none;
     text-align: center;
-    margin: auto;
+    width: 100%;
 }
-.botones a{
-    
-    width: 200px;
-    padding: 20px;
+header ul{
+    padding-left: 35px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+    list-style-type: none;
+    overflow: auto;
+}
+header a{
     display: block;
     float: left;
-    color: white;
+    padding-left: 40px;
+    padding-right: 60px;
     text-decoration: none;
-    border-right: 1px solid #000000;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-right: 1px solid yellow;
 
 }
-.botones a:hover{
-    color:yellow;
+header a:hover{
+    color:green;
+}
+.header2{
+    position: fixed;
+    height: 100px;
+    width: 1000px;
+}
+.header2 a{
+    color: rgb(232, 247, 34);
+}
+.titulos{
+    text-align: center;
+    padding: 70px;
+
+}
+/* ------------------Fin de botonera-------------------------- */
+
+/* --------------- Novedades ------------------------------------ */
+.novedades{
+    
+    padding-top: 30px;
+    padding-right: 108px;
+    padding-bottom: 20px;
+
+}
+.concierto{
+    padding-left: 98px;
+}
+.concierto img{
+    display:block;
+    padding-top: 36px;
+    padding-bottom: 30px;
+}
+.concierto p{
+    font-family: verdana;
+    font-size: 20px; 
+}
+
+/* ------------------------Biografia ------------------------ */
+.biografia{
+    
+    padding-top: 30px;
+    padding-bottom: 20px;
+    height: 800px;
+}
+.historia{
+    padding-left: 67px;
+    padding-right: 60px;
+
+}
+.historia img{
+    display:block;
+    padding-top: 30px;
+    float:left;
+}
+.historia p{
+    display: block;
+    width: 400px;
+    float: right;
+    padding-top: 80px;
+    padding-left: 12px;
+    font-family: verdana;
+    font-size: 20px;
+    text-align: justify;
 
 
 }
+.discografia{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.discografia img{
+    display: block;
+    padding-left: 30px;
+    float: left;
+}
+.album ul{
+    float: right;
+}
+.contactos{
+    
+    padding-top: 20px;
+    padding-bottom: 30px;
+    clear: both;
+    overflow: auto;
+
+}
+.contactos .envio{
+    display: block;
+    float: left;
+    padding-top: 25px;
+    padding-left: 12px;
+    font-family: verdana;
+    font-size: 20px;
+    text-align: justify;
+
+
+}
+.formulario{
+    padding-right: 90px;
+    padding-top: 10px;
+    float: right;
+
+}
+.cuadro{
+    border: 1px solid rgb(29, 26, 26);
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: sans-serif;
+    margin:  6px 0 4px;
+    padding: 12px;
+    width: 370px;
+}
+.comentario{
+    width: 100%:
+}
+.enviar{
+    background: none;
+    border:1px solid white;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;    
+}
+.enviar:hover{
+    background-color: rgb(238, 217, 236);
+    color: rgb(10, 238, 10);
+}
+.pie{
+    
+    padding-top: 20px;
+    padding-left: 20px;
+    border-top: 1px solid rgb(26, 6, 6);
+    font-size: 12px;
+    overflow: auto;
+    clear: both;
+}
+
+.pie-copy{
+    float: left;
+   
+}
+.sociales{
+    text-align: center;
+}
+.creditos{
+    clear: both;
+    text-align: right;
+}
+
+
+
+
+

@@ -4,54 +4,59 @@
         <title>La real reggae</title>
         <meta charset="utf-8">
         <link href="home.css" rel="stylesheet">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/myscript.js"></script>
 
     </head>
     <body>
-        <div class="botonera">
-            <ul class="botones">
-                <li><a href="#novedades">Novedades</a></li>
-                <li><a href="#biografia">Biografia</a></li>
-                <li><a href="home.html">Home</a></li> 
-                <li><a href="#discografia">Discografia</a></li>
-                <li><a href="#contactos">Contactos</a></li>
+    <div class="contenedor">
+        <div class="inicio">
+            <header>
+                <ul>
+                    <li><a href="#novedades">Novedades</a></li>
+                    <li><a href="#biografia">Biografia</a></li>
+                    <li><a href="home.html">Home</a></li> 
+                    <li><a href="#musica">Discografia</a></li>
+                    <li><a href="#contactos">Contactos</a></li>
 
-            </ul>     <!--Cierre de la lista-->
-        </div>  <!--Cierre de toda la Botonera-->
-        <!--                                       SLIDER (ALGO ASI)                                               -->
-        <div class="slider">
-            <img src="imagenes/imagendehome.jpg"
-             rel="imagen de reggae">
+                </ul>     <!--Cierre de la lista-->
+            </header>  <!--Cierre de toda la Botonera-->
+            <!--                                       SLIDER (ALGO ASI)                                               -->
+           <!-- <div class="slider">
+                <img src="imagenes/leon-reggaehome.jpg"
+                rel="imagen de reggae">
 
-        </div> <!--Cierre de Slider-->
+            </div> Cierre de Slider-->
+        </div> <!-- Cierre inicio -->
 
         <!--                                           NOVEDADES                                                  -->
-        <h2 id="novedades">NOVEDADES</h2>
+        
         <div class="novedades">
-            
+        <h2 id="novedades" class="titulos">NOVEDADES</h2>
+        
             <div class="concierto">
-                <img src="imagenes/novedad1.jpg" rel="imagen de novedad">
+                <img src="imagenes/imagendenovedades.jpg" rel="imagen de novedad">
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
                  in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                   Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one
                 </p>
             </div>
             <div class="concierto">
-                <img src="imagenes/novedad1.jpg" rel="imagen de novedad">
+                <img src="imagenes/imagendenovedades.jpg" rel="imagen de novedad">
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
                     in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                     Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one
                 </p>
             </div>
             <div class="concierto">
-                <img src="imagenes/novedad1.jpg" rel="imagen de novedad">
+                <img src="imagenes/imagendenovedades.jpg" rel="imagen de novedad">
                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
                      in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                      Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one
                  </p>
             </div>
             <div class="concierto">
-                <img src="imagenes/novedad1.jpg" rel="imagen de novedad">
+                <img src="imagenes/imagendenovedades.jpg" rel="imagen de novedad">
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
                      in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                      Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one
@@ -59,78 +64,81 @@
             </div>
         </div> <!--Cierre de Novedades-->
             <!--                                      BIOGRAFIA                                                 -->
-        <h2 id="biografia">BIOGRAFIA</h2>
+        
         <div class="biografia">
-            <img src="imagenes/imagendelabanda.jpg" rel="imagen de la banda">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-             looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution 
-             of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-             desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a 
-             search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved 
-             over the years,
-            </p>
+        <h2 id="biografia" class="titulos">BIOGRAFIA</h2>
+            <div class="historia">
+               <img src="imagenes/imagendelabandadefinida.jpg" rel="imagen de la banda">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution 
+                of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+                desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a 
+                search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved 
+                over the years,
+                </p>
+            </div>
         </div> <!--Cierre de Biografia-->
 
             <!--                                         DISCOGRAFIA                                             -->
-        <h2 id="discografia">DISCOGRAFIA</h2>
         
         <div class="discografia">
+        <h2 id="musica" class="titulos">DISCOGRAFIA</h2>
             <div class="album">
                 <h3>La de dios</h3>
                 
-                <img src="imagenes/album.jpg" rel="imagen del album">
+                <img src="imagenes/albummusic.jpg" rel="imagen del album">
                 
                 
                 
                 <ul>
                         <li>La Real Reggae - Alma, Tripa y Corazon
-                            <audio 
+                           <br> <audio 
                             src="audios/La Real Reggae - Alma, Tripa y Corazon.mp3" 
                             id="cancion" controls>
                             </audio>
                         </li>
                         <li>La real reggae - Concrete jungle (Bob Marley cover)
-                            <audio
+                            <br><audio
                              src="audios/La Real Reggae - Concrete Jungle (Bob Marley  The Wailes Cover).mp3" 
                              id="cancion" controls>
                             </audio> 
                              
                         </li>
                         <li>La real reggae - Cuando no estes
-                            <audio src="audios/La Real Reggae - Cuando no Estes.mp3" 
+                            <br><audio src="audios/La Real Reggae - Cuando no Estes.mp3" 
                             id="cancion" controls>
                             </audio>
                             
                         </li>
                         <li>La real reggae - Mix up (the gladiator cover)
-                            <audio src="audios/La Real Reggae - Mix Up (The Gladiators Cover).mp3"
+                            <br><audio src="audios/La Real Reggae - Mix Up (The Gladiators Cover).mp3"
                             id="cancion" controls>
                             </audio>
                             
                         </li>
                         <li>La real reggae - Nunca lo entenderan
-                            <audio src="audios/La Real Reggae - Nunca lo Entenderan.mp3" 
+                            <br><audio src="audios/La Real Reggae - Nunca lo Entenderan.mp3" 
                             id="cancion" controls>
                             </audio>
                             
                         </li>
                         <li>La real reggae - Tranqui 120!
-                            <audio src="audios/La Real Reggae - Tranqui 120.mp3" 
+                            <br><audio src="audios/La Real Reggae - Tranqui 120.mp3" 
                             id="cancion" controls>
                             </audio>
                          </li>
                         <li>La real reggae - Quiero que me digas
-                            <audio src="audios/La Real Reggae  - Quiero que me Digas.mp3"
+                            <br><audio src="audios/La Real Reggae  - Quiero que me Digas.mp3"
                             id="cancion" controls>
                             </audio>
                         </li>
                         <li>La real reggae - La pacha
-                            <audio src="audios/La Real Reggae - La Pacha.mp3" 
+                            <br><audio src="audios/La Real Reggae - La Pacha.mp3" 
                             id="cancion" controls>
                             </audio>
                         </li>
                         <li>La real reggae - La llave
-                           <audio src="audios/La Real Reggae - La Llave.mp3"
+                            <br><audio src="audios/La Real Reggae - La Llave.mp3"
                            id="cancion" controls>
                             </audio>
                         </li>
@@ -139,33 +147,40 @@
 
         </div> <!--Cierre de discografia-->
                  <!--                                       CONTACTOS                                           -->
-        <h2 id="contactos">CONTACTOS</h2>
+        
         <div class="contactos">
-            <form method="get" action="mailto:gabiu_ramirez@hotmail.com">
-                <p>Los mensajes seran enviado a:<a href="mailto:algo@hotmail.com">algo@hotmail.com</a></p>
-                <br>
-                <p>Ingrese su nombre:
-                    <input type="text" name="nombre" placeholder="nombre">
-                </p>
-                <br>
-                <p>Su email:
-                    <input type="email" name="email" placeholder="email@algo.com" required>
-                </p>
-                <br>
-                <p>Deja tu comentario</p>
-                <textarea name="comentario" cols="30" rows="10" maxlength="500"></textarea>
-                <input type="submit" value="enviar comentario">
+        <h2 id="contactos" class="titulos">CONTACTOS</h2>
 
-            </form>
+            <p class="envio">Los mensajes seran enviado a:
+                <br><a href="mailto:algo@hotmail.com">algo@hotmail.com</a></p>
+        
+            <div class="formulario">
+                <form method="get" action="mailto:gabiu_ramirez@hotmail.com">
+                    
+                   <p>Ingrese su nombre:
+                       <br><input type="text" name="nombre" placeholder="nombre" class="cuadro" required>
+                    </p> 
+                    <br>
+                    <p>Su email:
+                        <br><input type="email" name="email" placeholder="email@algo.com" class="cuadro" required>
+                    </p>
+                    <br>
+                    <p>Deja tu comentario</p>
+                    <textarea name="comentario" cols="30" rows="10" maxlength="500" class="comentario">
+                    </textarea>
+            
+                    <input type="submit" value="enviar" class="enviar">
+
+                </form>
+            </div>
 
         </div>  <!--Cierre de Contactos-->
-        <footer>  <!-- Pie de pagina -->
-            <div class="pie">
-                <ul>
-                    <li> &copy; 2017 Copyright</li>
-                    <li>La Real Reggae</li>
-                    <li>Todos los derechos reservados</li>
-                </ul>
+        <footer class="pie">  <!-- Pie de pagina -->
+            <div class="pie-copy">
+                
+                    <p> &copy; 2017 Copyright - La real reggae</p><br>
+                    <p>Todos los derechos reservados</p>
+                
             </div>
             <div class="sociales">
                 <div>
@@ -176,8 +191,13 @@
                 </div>
 
             </div>
-        </footer>
+            <div class="creditos">
+                <p>Diseñado por <strong>cordo e.e</strong></p>
+            </div>
+        </footer> <!-- cierre de pie -->
+    </div>   <!-- Cierre del Contenedor -->
 
+    
     </body>
 
 

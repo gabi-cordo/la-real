@@ -16,22 +16,26 @@ body{
 .contenedor{
     max-width: 1000px;
     margin: auto;
+    background-color: rgb(42, 38, 38);
 
 }
 .inicio{
-    background-image: url("imagenes/leon-reggaehome.jpg");
+    width: 100%;
     overflow: auto;
-    height: 800px;
     background-size: cover;
+}
+.inicio img{
+    width: 100%;
 }
 
 header{
-
     list-style-type: none;
     text-align: center;
     width: 100%;
+    position: fixed;
+    background-color: transparent;
 }
-header ul{
+header .listas{
     padding-left: 35px;
     padding-top: 25px;
     padding-bottom: 20px;
@@ -44,12 +48,17 @@ header a{
     float: left;
     padding-left: 40px;
     padding-right: 60px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 20px;
     border-right: 1px solid yellow;
 
+}
+header a#t{
+    border: none;
 }
 header a:hover{
     color:green;
@@ -58,14 +67,52 @@ header a:hover{
     position: fixed;
     height: 100px;
     width: 1000px;
+    z-index: 3;
 }
 .header2 a{
-    color: rgb(232, 247, 34);
+    background-color: rgb(55, 54, 65);
+    color: rgb(239, 220, 13);
 }
 .titulos{
     text-align: center;
     padding: 70px;
 
+}
+.nav{
+    position: absolute;
+    display: none;
+}
+.nav button{
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+
+.nav-mobile{
+	position: absolute;
+    max-width: 400px;
+    padding: 0px;
+    display: none;
+	list-style-type: none;
+	background-color: #231e23;
+}
+
+.nav-mobile a{
+	display: block;
+	padding: 12px;
+	border-bottom: 1px dashed #93939e;
+	color: #FFF;
+    text-decoration: none;
+    width: 100%;
+    border-right: none;
+}
+.nav-mobile a:hover{
+	background-color: orange;
+}
+
+.toggle{
+	display: block;
 }
 /* ------------------Fin de botonera-------------------------- */
 
@@ -73,7 +120,6 @@ header a:hover{
 .novedades{
     
     padding-top: 30px;
-    padding-right: 108px;
     padding-bottom: 20px;
 
 }
@@ -87,7 +133,8 @@ header a:hover{
 }
 .concierto p{
     font-family: verdana;
-    font-size: 20px; 
+    font-size: 20px;
+    padding-right: 106px;
 }
 
 /* ------------------------Biografia ------------------------ */
@@ -119,18 +166,56 @@ header a:hover{
 
 
 }
+/* --------------------------DISCOGRAFIA------------- */
 .discografia{
     padding-top: 30px;
     padding-bottom: 20px;
 }
+.tit-album{
+    padding-left: 34px;
+    font-size: 37px;
+}
 .discografia img{
     display: block;
-    padding-left: 30px;
+    padding-top: 15px;
+    padding-left: 64px;
     float: left;
 }
-.album ul{
+#accordion{
     float: right;
+    list-style-type: none;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-right:  58px;
 }
+#accordion .link{
+    cursor: pointer;
+    display: block;
+    background-color: rgb(4, 4, 17);
+    position: relative;
+    padding: 12px;
+    -webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease; 
+}
+#accordion ul.a{
+    display: none;
+    background: rgb(8, 7, 7);
+}
+#accordion ul.a audio.cancion{
+    display: block;
+    padding: 12px;
+    -webkit-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+#accordion ul.a audio.cancio:hover{
+    background: rgb(0, 0, 0);
+}
+
+/* ------------------------CONTACTOS------------------ */
 .contactos{
     
     padding-top: 20px;
@@ -143,12 +228,18 @@ header a:hover{
     display: block;
     float: left;
     padding-top: 25px;
-    padding-left: 12px;
+    padding-left: 60px;
     font-family: verdana;
-    font-size: 20px;
+    font-size: 22px;
     text-align: justify;
 
 
+}
+.correo{
+    color: white;
+}
+.correo:hover{
+    color:rgb(187, 57, 57);
 }
 .formulario{
     padding-right: 90px;
@@ -174,14 +265,18 @@ header a:hover{
     cursor: pointer;
     font-weight: bold;
     color: white;
-    font-size: 15px;    
+    font-size: 22px; 
+    margin: 21px 0 6px 0;
+    position: relative;
+    left: 132px;   
 }
 .enviar:hover{
     background-color: rgb(238, 217, 236);
-    color: rgb(10, 238, 10);
+    color: rgb(63, 11, 148);
 }
 .pie{
-    
+    height: 140px;
+    background-color: #1f1f23;
     padding-top: 20px;
     padding-left: 20px;
     border-top: 1px solid rgb(26, 6, 6);
@@ -195,14 +290,245 @@ header a:hover{
    
 }
 .sociales{
-    text-align: center;
+    padding-left: 500px;
+}
+#facebook, #twitter, #instegram, #youtube{
+	
+	height: 23px;
+	padding-left: 24px;
+	background-image: url(imagenes/sociales.png);
+	background-repeat: no-repeat;
+
+}
+#facebook{
+    background-position: 0px 0px;
+    float: left;
+    border-radius: 23px;
+    cursor: pointer;
+}
+#twitter{
+    background-position: 0px -23px;
+    float: left;
+    border-radius: 23px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+#instegram{
+    background-position: 0px -46px;
+    float: left;
+    border-radius: 23px;
+    cursor: pointer;
+}
+#youtube{
+    background-position: 0px -69px;
+    float: left;
+    border-radius: 23px;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
 }
 .creditos{
     clear: both;
     text-align: right;
+    padding-top: 58px;
 }
 
 
+/* ---------------MOBILE------------------------ */
 
+@media (max-width: 768px){
+    header ul{
+        padding-left: 0px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        list-style-type: none;
+        overflow: auto;
+    }
 
+    header a{
+        display: block;
+        float: left;
+        padding-left: 33px;
+        padding-right: 38px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-right: 1px solid yellow;
+    }
+    .concierto{
+        padding-left: 27px;
+        padding-right: 22px;
+    }
+    .concierto img{
+        display:block;
+        padding-top: 36px;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+    .concierto p{
+        font-family: verdana;
+        font-size: 20px;
+        padding-right: 0px;
+    }
+    .historia{
+        padding-left: 27px;
+        padding-right: 22px;
+    
+    }
+    .historia img{
+        display:block;
+        padding-top: 0px;
+        float:left;
+        width: 50%;
+    }
+    .historia p{
+        display: block;
+        width: 50%;
+        float: right;
+        padding-top: 0px;
+        padding-left: 12px;
+        font-family: verdana;
+        font-size: 20px;
+        text-align: justify;
+    
+    
+    }
+    .album{
+        padding-left: 23px;
+    }
+    .tit-album{
+        padding-left: 52px;
+        font-size: 37px;
+    }
+    .discografia img{
+        display: block;
+        padding-top: 15px;
+        padding-left: 27px;
+        float: left;
+        width: 50%;
+    }
+    #accordion{
+        float: right;
+        list-style-type: none;
+        text-decoration: none;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding-left: 25px;
+        width: 50%;
+    }
+    .contactos{
+        
+        padding-top: 20px;
+        clear: both;
+    
+    }
+    .contactos .envio{
+        display: block;
+        float: left;
+        padding-left: 27px;
+        font-family: verdana;
+        font-size: 22px;
+        text-align: justify;
+        width: 50%;
+    
+    }
+    .formulario{
+        float: right;
+        width: 50%;
+        padding-bottom: 25px;
+        padding-right: 15px;
+    }
+    .sociales{
+        padding-left: 370px;
+    }
+}
+
+@media(max-width: 480px){
+    .nav{
+        display: block;
+        padding: 15px;
+    }
+    header a{
+        display: none;
+    }
+    .biografia{
+        
+        padding-top: 30px;
+        padding-bottom: 20px;
+        height: 1050px;
+    }
+    .historia img{
+        width: 100%;
+    }
+    .historia p{
+        display: block;
+        width: 100%;
+        padding-top: 20px;
+        font-family: verdana;
+        font-size: 20px;
+        text-align: justify;
+    }
+    .discografia{
+        height: 952px;
+    }
+    .album{
+        padding-left: 0px;
+    }
+    .tit-album{
+        padding-left: 20px;
+        font-size: 37px;
+    }
+    .discografia img{
+        display: block;
+        padding-top: 15px;
+        padding-left: 27px;
+        float: left;
+        width: 70%;
+    }
+    #accordion{
+        float: right;
+        list-style-type: none;
+        text-decoration: none;
+        border-radius: 4px;
+        padding-left: 25px;
+        width: 100%;
+        padding-top: 23px;
+        padding-right: 23px;
+    }
+    .contactos .envio{
+        display: block;
+        float: left;
+        padding-left: 27px;
+        font-family: verdana;
+        font-size: 17px;
+        text-align: justify;
+        width: 41%;
+    
+    }
+    .formulario{
+        float: right;
+        width: 57%;
+        padding-bottom: 25px;
+        padding-right: 15px;
+    }
+    .cuadro{
+        border: 1px solid rgb(29, 26, 26);
+        border-radius: 3px;
+        font-size: 15px;
+        font-family: sans-serif;
+        margin:  6px 0 4px;
+        padding: 12px;
+        width: 100%;
+    }
+    .enviar{
+        left: 82px;   
+    }
+    .sociales{
+        padding-left: 244px;
+    }
+
+}
 

@@ -3,24 +3,57 @@
     <head>
         <title>La real reggae</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
         <link href="home.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="js/myscript.js"></script>
-
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/myscript.js"></script> 
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="js2/jquery.anchor.js"></script>
     </head>
     <body>
     <div class="contenedor">
-        <div class="inicio">
+        <div id="home" class="inicio">
             <header>
-                <ul>
-                    <li><a href="#novedades">Novedades</a></li>
-                    <li><a href="#biografia">Biografia</a></li>
-                    <li><a href="home.html">Home</a></li> 
-                    <li><a href="#musica">Discografia</a></li>
-                    <li><a href="#contactos">Contactos</a></li>
+                <div class="nav">
+                    <button id="boton">
+                     <img src="imagenes/menumobile.svg" alt="menu mobile">
+                    </button>
+                        <ul class="nav-mobile" id="menu">
+                            <li><a href="#home" class="anchorLink">Home</a></li> 
+                            <li><a href="#novedades" class="anchorLink">Novedades</a></li>
+                            <li><a href="#biografia" class="anchorLink">Biografia</a></li>
+                            <li><a href="#musica" class="anchorLink">Discografia</a></li>
+                            <li><a href="#contactos" id= "t" class="anchorLink">Contactos</a></li>
+                
+                        </ul>
+                </div>
+                    <script>
+                         boton.addEventListener(
+                             "click",
+                             function(){
+                              menu.classList.toggle("toggle");
+                                }
+                
+                            );
+                    </script>    
+                
+                <ul class="listas">
+                    <li><a href="#novedades" class="anchorLink">Novedades</a></li>
+                    <li><a href="#biografia" class="anchorLink">Biografia</a></li>
+                    <li><a href="#home" class="anchorLink">Home</a></li> 
+                    <li><a href="#musica" class="anchorLink">Discografia</a></li>
+                    <li><a href="#contactos" id= "t" class="anchorLink">Contactos</a></li>
 
                 </ul>     <!--Cierre de la lista-->
-            </header>  <!--Cierre de toda la Botonera-->
+
+
+
+            </header> <!--Cierre de toda la Botonera-->
+           
+            <img src="imagenes/leon-reggaehome.jpg">
+           
             <!--                                       SLIDER (ALGO ASI)                                               -->
            <!-- <div class="slider">
                 <img src="imagenes/leon-reggaehome.jpg"
@@ -84,65 +117,89 @@
         <div class="discografia">
         <h2 id="musica" class="titulos">DISCOGRAFIA</h2>
             <div class="album">
-                <h3>La de dios</h3>
+                <h3 class="tit-album">La de dios</h3>
                 
                 <img src="imagenes/albummusic.jpg" rel="imagen del album">
                 
+            
                 
+                    <ul id="accordion" class="accordion">
+                            <li>
+                                <div class="link">La Real Reggae - Alma, Tripa y Corazon</div>
+                                   <ul class="a">
+                                       <audio class="cancion" 
+                                        src="audios/La Real Reggae - Alma, Tripa y Corazon.mp3" 
+                                        controls>
+                                        </audio>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div class="link">La real reggae - Concrete jungle (Bob Marley cover)</div>
+                                   <ul class="a">
+                                        <audio class="cancion"
+                                        src="audios/La Real Reggae - Concrete Jungle (Bob Marley  The Wailes Cover).mp3" 
+                                        controls>
+                                        </audio>
+                                   </ul>
+                            </li>
+                            <li>
+                                <div class="link">La real reggae - Cuando no estes</div>
+                                    <ul class="a">
+                                        <audio class="cancion" src="audios/La Real Reggae - Cuando no Estes.mp3" 
+                                            controls>
+                                        </audio>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div class="link">La real reggae - Mix up (the gladiator cover)</div>
+                                    <ul class="a">
+                                        <audio class="cancion" src="audios/La Real Reggae - Mix Up (The Gladiators Cover).mp3"
+                                        controls>
+                                        </audio>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div class="link">La real reggae - Nunca lo entenderan</div>
+                                    <ul class="a">
+                                        <audio class="cancion" src="audios/La Real Reggae - Nunca lo Entenderan.mp3" 
+                                        controls>
+                                        </audio>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div class="link">La real reggae - Tranqui 120!</div>
+                                    <ul class="a">
+                                        <audio class="cancion" src="audios/La Real Reggae - Tranqui 120.mp3" 
+                                        id="cancion" controls>
+                                        </audio>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div class="link">La real reggae - Quiero que me digas</div>
+                                    <ul class="a">
+                                        <audio class="cancion" src="audios/La Real Reggae  - Quiero que me Digas.mp3"
+                                        controls>
+                                        </audio>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div class="link">La real reggae - La pacha</div>
+                                    <ul class="a">
+                                        <audio class="cancion"src="audios/La Real Reggae - La Pacha.mp3" 
+                                        controls>
+                                        </audio>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div class="link">La real reggae - La llave</div>
+                                    <ul class="a">
+                                        <audio class="cancion" src="audios/La Real Reggae - La Llave.mp3"
+                                        controls>
+                                        </audio>
+                                    </ul>
+                            </li>
+                    </ul>
                 
-                <ul>
-                        <li>La Real Reggae - Alma, Tripa y Corazon
-                           <br> <audio 
-                            src="audios/La Real Reggae - Alma, Tripa y Corazon.mp3" 
-                            id="cancion" controls>
-                            </audio>
-                        </li>
-                        <li>La real reggae - Concrete jungle (Bob Marley cover)
-                            <br><audio
-                             src="audios/La Real Reggae - Concrete Jungle (Bob Marley  The Wailes Cover).mp3" 
-                             id="cancion" controls>
-                            </audio> 
-                             
-                        </li>
-                        <li>La real reggae - Cuando no estes
-                            <br><audio src="audios/La Real Reggae - Cuando no Estes.mp3" 
-                            id="cancion" controls>
-                            </audio>
-                            
-                        </li>
-                        <li>La real reggae - Mix up (the gladiator cover)
-                            <br><audio src="audios/La Real Reggae - Mix Up (The Gladiators Cover).mp3"
-                            id="cancion" controls>
-                            </audio>
-                            
-                        </li>
-                        <li>La real reggae - Nunca lo entenderan
-                            <br><audio src="audios/La Real Reggae - Nunca lo Entenderan.mp3" 
-                            id="cancion" controls>
-                            </audio>
-                            
-                        </li>
-                        <li>La real reggae - Tranqui 120!
-                            <br><audio src="audios/La Real Reggae - Tranqui 120.mp3" 
-                            id="cancion" controls>
-                            </audio>
-                         </li>
-                        <li>La real reggae - Quiero que me digas
-                            <br><audio src="audios/La Real Reggae  - Quiero que me Digas.mp3"
-                            id="cancion" controls>
-                            </audio>
-                        </li>
-                        <li>La real reggae - La pacha
-                            <br><audio src="audios/La Real Reggae - La Pacha.mp3" 
-                            id="cancion" controls>
-                            </audio>
-                        </li>
-                        <li>La real reggae - La llave
-                            <br><audio src="audios/La Real Reggae - La Llave.mp3"
-                           id="cancion" controls>
-                            </audio>
-                        </li>
-                </ul>
             </div>
 
         </div> <!--Cierre de discografia-->
@@ -152,7 +209,7 @@
         <h2 id="contactos" class="titulos">CONTACTOS</h2>
 
             <p class="envio">Los mensajes seran enviado a:
-                <br><a href="mailto:algo@hotmail.com">algo@hotmail.com</a></p>
+                <br><a href="mailto:algo@hotmail.com" class="correo">algo@hotmail.com</a></p>
         
             <div class="formulario">
                 <form method="get" action="mailto:gabiu_ramirez@hotmail.com">
@@ -173,6 +230,14 @@
 
                 </form>
             </div>
+                <!-- prueba acordeon -->
+            
+
+
+
+
+
+
 
         </div>  <!--Cierre de Contactos-->
         <footer class="pie">  <!-- Pie de pagina -->
@@ -183,12 +248,26 @@
                 
             </div>
             <div class="sociales">
-                <div>
-                    <a href="http://facebook.com">Facebook</a>
-                </div>
-                <div>
-                    <a href="http://instagram">Instagram</a>
-                </div>
+             <a href="http://facebook.com" target="_blank"
+              title="Facebook">
+                <p id="facebook">
+                </p>
+            </a>
+            <a href="https://twitter.com" target="_blank"
+            title="Twitter">
+                <p id="twitter">
+                </p>
+            </a>
+            <a href="https://www.instagram.com" target="_blank"
+            title="Instagram">
+                <p id="instegram">
+                </p>
+            </a>
+            <a href="https://www.youtube.com/channel/UCAiM5BobQqydHYCC_Q4TCwg" target="_blank"
+            title="Youtube">
+                <p id="youtube">
+                </p>
+            </a>
 
             </div>
             <div class="creditos">
@@ -196,7 +275,6 @@
             </div>
         </footer> <!-- cierre de pie -->
     </div>   <!-- Cierre del Contenedor -->
-
     
     </body>
 

@@ -502,7 +502,8 @@ header a:hover{
     .contactos{
         padding-top: 20px;
         clear: both;
-        padding-left: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .contactos .envio{
         display: block;

@@ -120,12 +120,6 @@ header a:hover{
 /* ------------------Fin de botonera-------------------------- */
 
 /* --------------- Novedades ------------------------------------ */
-.novedades{
-    
-    /* padding-top: 30px; */
-    /* padding-bottom: 20px; */
-
-}
 .concierto{
     padding-left: 60px;
     width: 100%;
@@ -174,10 +168,6 @@ header a:hover{
 
 }
 /* --------------------------DISCOGRAFIA------------- */
-.discografia{
-    /* padding-top: 30px; */
-    /* padding-bottom: 20px; */
-}
 .album{
     padding-left: 60px;
     padding-right: 60px;
